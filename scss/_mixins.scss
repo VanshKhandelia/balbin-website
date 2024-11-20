@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+// HEADING TEXT
+// Heading style white
+@mixin heading-style-white($size){
+    font-family: $heading-font;
+    color: $primary-white;
+    font-size: $size;
+}
+
+// Heading style black
+@mixin heading-style-black($size){
+    font-family: $heading-font;
+    color: $primary-black;
+    font-size: $size;
+}
+
+// BODY TEXT
+// Body style white
+@mixin body-style-white($size){
+    font-family: $body-font;
+    color: $primary-white;
+    font-size: $size;
+}
+
+// Body style black
+@mixin body-style-black($size){
+    font-family: $body-font;
+    color: $primary-white;
+}
