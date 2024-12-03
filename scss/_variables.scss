@@ -20,12 +20,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: $heading-font-tracking;
 }
   
-// Italic font style
-.italic-text {
-    font-family: $header-font-italic;
-    font-style: italic;
-    letter-spacing: $header-font-italic-tracking;
-}
+
 
 // Font-sizes
 $heading-xxl: 5rem;
