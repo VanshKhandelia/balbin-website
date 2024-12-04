@@ -4,10 +4,22 @@ $primary-black: #000000;
 $primary-blue: #061136;
 
 // Font-families
-$heading-font: "EB Garamond", serif;
-// $header-font-italic: ;
-$body-font: "Roboto", sans-serif;
+$heading-font: "Goudy Old Style", serif;
+$heading-font-tracking: -0.043em;
+// $header-font-italic:
+$header-font-italic: "Hoefler Text", serif;
+$header-font-italic-tracking: -0.062em;
+
 // $body-font-italic: ;
+$body-font: "Goudy Old Style", serif;
+
+
+// Heading style
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    letter-spacing: $heading-font-tracking;
+}
+  
 
 
 // Font-sizes

@@ -29,3 +29,10 @@
     color: $primary-white;
     font-size: $size;
 }
+
+// Italic
+@mixin italic-text($size) {
+    font-family: $header-font-italic;
+    font-style: italic;
+    letter-spacing: $header-font-italic-tracking;
+}
