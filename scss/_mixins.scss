@@ -27,4 +27,5 @@
 @mixin body-style-black($size){
     font-family: $body-font;
     color: $primary-white;
+    font-size: $size;
 }

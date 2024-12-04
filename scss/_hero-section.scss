@@ -1,7 +1,75 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.video-background{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; 
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $primary-white;
+    z-index: 0;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: stretch;
+    // align-items: stretch;
+}
+
+section.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    flex: 1;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.h1 {
+    @include heading-style-white($heading-md);
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+  
+.inline-block {
+    display: block;
+}
+  
 
 h1{
-    @include heading-style-black($heading-xl);
+    width: 100%;
+    height: auto;
+    padding: $padding-sides;
+    margin: 0;
 }

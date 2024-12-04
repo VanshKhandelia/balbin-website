@@ -9,45 +9,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles/normalize-fwd-vers2.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <!-- Beginning of header (Dani) -->
-    <header>
-        <div>
+    <div class="video-background">
+        <video autoplay loop muted id="background-video">
+          <source src="images/hero-video.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <!-- Beginning of Header: (Dani) -->
+        <header class="site-header">
+          <div class="site-header-mobile">
             <a href="index.html">
-                <div class="logo-wrapper">
-                    <img src="" alt="">
-                </div>
+              <div class="logo-wrapper">
+                <img src="images/chevron-down-1.svg" alt="Balbin water logo">
+              </div>
             </a>
+          </div>
+          <nav class="main-nav">
+              <ul id="main-nav-list" class="close">
+                  <li><a href="#">Still Water</a></li>
+                  <li><a href="#">Sparkling Water</a></li>
+                  <li><a href="#">Story</a></li>
+                  <li><a href="#">Partners</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
             <div class="menu-wrapper">
-                <button id="" title=""><img src="images/menu.svg" alt="Menu icon"></button>
+              <button id="main-nav-button" title="menu button"><img src="images/menu.svg" alt="Menu icon" id="button-svg"></button>
             </div>
+        </header>
+        <!-- End of Header: (Dani) -->
+        <!-- Beginning of Hero Section: (Dani) -->
+        <div class="overlay">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Still Water</a></li>
-                <li><a href="#">Sparkling Water</a></li>
-                <li><a href="#">Story</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- End of header (Dani) -->
-    <main>
-        <!-- Beginning of Hero section (Dani) -->
-        <section>
-            <h1>Celebrating Life's Finest Moments with a <span>Timeless Beverage</span></h1>
-            <a href="#">
-                <div>
-                    <p>Explore more</p>
-                    <div><img src="images/arrow-down.svg" alt="downwards arrow"></div>
-                </div>
-            </a>
+        <section class="hero-section">
+          <div class="h1">
+            <h1><span class="inline-block">Celebrating Life's Finest Moments</span>
+              <span class="inline-block">with a <span>Timeless Beverage</span></span></h1>
+          </div>
+          <a href="#">
+            <div>
+              <p>Explore more</p>
+              <div><img src="images/arrow-down.svg" alt="downwards arrow"></div>
+            </div>
+          </a>
         </section>
-        <!-- End of Hero section (Dani) -->
+        <!-- Beginning of Hero Section: (Dani) -->
+      </div>
+
+    <main>
         <!-- Beginning of Section 1: "Born from a desire..." (J) -->
 
         <!-- End of Section 1: "Born from a desire..." (J) -->
