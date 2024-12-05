@@ -1,111 +1,111 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 @media screen and (min-width: 50em) {
-
-    footer {
-        background-color: $footer-bg-color;
-        padding: $footer-padding;
-        justify-content: space-around;
-    }
+  footer {
+    background-color: $footer-bg-color;
+    padding: $footer-padding;
+    justify-content: space-around;
 
     .footer-columns {
-        width: $footer-column-width;
-        display: flex;
-        flex-direction: column;
+      width: $footer-column-width;
+      display: flex;
+      flex-direction: column;
     }
 
     h3 {
-        margin-bottom: 10px;
-        color: $footer-text-color;
-
+      margin-bottom: 10px;
+      color: $footer-text-color;
     }
 
     ul {
-        list-style-type: none;
-        padding: 0;
+      list-style-type: none;
+      padding: 0;
     }
 
     li {
-        color: $footer-text-color;
-        margin-bottom: 5px;
+      color: $footer-text-color;
+      margin-bottom: 5px;
     }
 
     p {
-        display: flex;
-        font-size: .8em;
-
+      display: flex;
+      font-size: 0.8em;
     }
 
     .balbin-footer {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        width: 100%;
-
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      width: 100%;
     }
 
     .balbin-copyright {
-        flex: 1;
-        text-align: left;
-
+      flex: 1;
+      text-align: left;
     }
 
     .purple-copy {
-        color: purple;
+      color: purple;
     }
 
     .balbin-reserved {
-        flex: 1;
-        text-align: center;
+      flex: 1;
+      text-align: center;
     }
 
     .container {
-        display: flex;
-        justify-content: space-around;
-        padding-bottom: 1rem;
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 1rem;
     }
-}
+  }
 
-.balbin-logo {
+  .balbin-logo {
     width: 50px;
     height: 50px;
     margin-top: 20px;
-}
+  }
 
-
-ul {
+  ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-   
-}
+  }
 
-h3 {
-font-size: 1rem;
-margin-bottom: 3rem;
-}
-.balbin-copyright { 
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .balbin-copyright {
     flex: 1;
     text-align: left;
-}
+  }
 
-.purple-copy {
+  .purple-copy {
     color: purple;
-}
+  }
 
-.balbin-reserved {
+  .balbin-reserved {
     flex: 1;
     text-align: right;
-}
+  }
 
-.balbin-footer {
+  .balbin-footer {
     display: flex;
     justify-content: space-between;
     align-content: center;
     width: 100%;
     margin-top: 9rem;
-}
+  }
 
-.footer-columns {
+  .footer-columns {
     margin-bottom: 40px;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+  }
 }
