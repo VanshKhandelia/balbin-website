@@ -25,7 +25,11 @@
       line-height: 1;
       letter-spacing: -3px;
     }
-  
+    img{
+        mix-blend-mode: multiply;
+        padding-left: 30vw;
+        padding-right: 30vh;
+    }
     .section-content {
       max-width: 30rem;
       .text{
