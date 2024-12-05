@@ -1,0 +1,98 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.site-header {
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.site-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 32px;
+  height: 48px;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-nav-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+#main-nav-list, .contact{
+  display: none;
+}
+
+.menu-wrapper{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+#main-nav-list.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  row-gap: 1rem;
+}
+
+
+
+@media (min-width: $desktop) {
+  #main-nav-button {
+    display: none;
+  }
+  #main-nav-list, .contact {
+    display: flex;
+    width: fit-content;
+  }
+}
+
+ul{
+  list-style: none;
+}
+
+.main-nav-middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: 3rem;
+}
+
+a{
+  @include body-style-white($body-reg);
+  text-decoration: none;
+}
