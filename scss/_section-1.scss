@@ -1,6 +1,44 @@
+/*SECTION 1 Liquid Gold*/
 @use 'variables' as *;
 @use 'mixins' as *;
 
 .italic-text{
     @include italic-text($body-reg);
 }
+
+.moravia {
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    background: #F0EFE8 url('images/pattern.png') repeat;
+    min-height: 52rem;
+    height: 100vh;
+    padding: 10rem $padding-sides;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    h2 {
+      margin: 0;
+      padding: 0;
+      @include heading-style-black($heading-lg);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+  
+    .section-content {
+      max-width: 30rem;
+      .text{
+        @include body-style-black($body-reg);
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        justify-content: flex-start;
+
+        a{
+            @include body-style-black($body-reg);
+        }
+    }
+    }
+    
+  }
