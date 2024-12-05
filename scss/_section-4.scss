@@ -1,0 +1,74 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.cauousel-image {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Name-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.Prague {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.Balin-Locations {
+  display: flex;
+  justify-content: start;
+}
+
+.apples {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 2rem;
+  // text-align: center;
+  padding: 0 150px;
+}
+
+body {
+  padding: 240px 20px;
+}
+
+.gourmet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
