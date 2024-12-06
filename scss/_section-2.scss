@@ -4,11 +4,12 @@
 @use 'mixins' as *;
 
 
-body{
+body {
     margin: 0;
     box-sizing: border-box;
 }
-.liquid-gold{
+
+.liquid-gold {
     box-sizing: border-box;
     background-image: url("../images/section-2-bg.jpg");
     background-size: cover;
@@ -24,22 +25,26 @@ body{
     flex-direction: column;
     justify-content: space-between;
 
-    h2{
+    h2 {
         margin: 0;
         padding: 0;
         @include heading-style-white($heading-lg);
-        line-height: 1;
-        letter-spacing: -3px;
+
+        span {
+            font-family: $header-font-italic;
+            font-style: italic;
+            letter-spacing: $header-font-italic-tracking;
+        }
     }
 
-    div.section-content{
+    div.section-content {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         gap: 80px;
         width: calc(100%);
 
-        figure{
+        figure {
             display: flex;
             gap: 2.5rem;
             flex-direction: row;
@@ -49,13 +54,16 @@ body{
             width: 100%;
             height: min-content;
             overflow-x: hidden;
-            img{
+
+            img {
                 width: 8.75rem;
                 height: 4.9944rem;
             }
-            figcaption{
+
+            figcaption {
                 width: max-content;
-                p{
+
+                p {
                     @include body-style-white($body-small);
                     margin: 0;
                     width: max-content;
@@ -63,37 +71,40 @@ body{
             }
         }
 
-        .text{
+        .text {
             @include body-style-white($body-reg);
             display: flex;
             flex-direction: column;
             gap: 2.5rem;
             justify-content: flex-start;
 
-            a{
+            a {
                 @include body-style-white($body-reg);
             }
         }
 
-        
-        
+
+
     }
-    @media (min-width: $desktop){
+
+    @media (min-width: $desktop) {
         padding: 80px 1.25rem;
         min-height: 100vh;
-        h2{
+
+        h2 {
             font-size: $heading-xl;
         }
-        
-        .text{
+
+        .text {
             width: 45rem;
         }
     }
-    
-    @media (min-width: $desktop-lg){
+
+    @media (min-width: $desktop-lg) {
         padding: 5rem 2.5rem;
         overflow-y: hidden;
-        h2{
+
+        h2 {
             font-size: $heading-xxl;
             margin: 0;
             width: 51.5rem;
