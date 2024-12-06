@@ -19,16 +19,18 @@
     justify-content: space-between;
   
     h2 {
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
       @include heading-style-black($heading-lg);
       line-height: 1;
       letter-spacing: -3px;
     }
+
     img{
         mix-blend-mode: multiply;
-        padding-left: 30vw;
-        padding-right: 30vh;
+        width:50vw;
+        height:30vh;
+        margin: 0;
     }
     .section-content {
       max-width: 30rem;
@@ -44,5 +46,24 @@
         }
     }
     }
+    @media (min-width: $desktop){
+        padding: 80px 1.25rem;
+        min-height: 100vh;
+        h2{
+            font-size: $heading-xl;
+            width: 60rem;
+            text-align:center;
+        }
+        
+    }
     
+    @media (min-width: $desktop-lg){
+        padding: 5rem 2.5rem;
+        overflow-y: hidden;
+        h2{
+            font-size: $heading-xxl;
+            width: 60rem;
+            text-align:center;
+        }
+    }
   }
