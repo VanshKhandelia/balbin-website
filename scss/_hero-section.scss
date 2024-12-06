@@ -20,40 +20,57 @@
     z-index: -1; 
 }
 
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: $primary-white;
-    z-index: 0;
-}
+// .overlay{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     color: $primary-white;
+//     z-index: 0;
+// }
 
 .hero-section{
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    align-items: stretch;
-    flex: 1;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 
-.hero-text {
+.hero-section-middle{
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    left: 0; 
+    right: 0;
+    margin: auto;
+}
+
+@media (min-width: $desktop){
+    .break{
+        display: inline-block;
+    }
+}
+
+.hero-section-bottom{
+    position: absolute;
+    bottom: 6rem;
+}
+
+.hero-text-wrapper {
     @include heading-style-white(1.125rem);
     width: fit-content;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: $padding-sides;
 
     @media (min-width: $desktop){
-        font-size: 28px;
+        @include heading-style-white(1.5rem);
     }
 }
 
@@ -62,21 +79,30 @@ h1{
     height: auto;
 }
 
+
+
 .inline-block {
     display: block;
 }
 
 .italic-text{
     @include italic-text(20px);
+
 }
 
 .call-to-action-1{
-    padding: $padding-sides $padding-sides 70px;
+    padding: 0 $padding-sides;
     display: flex;
     flex-direction: row;
     justify-content: start;
     column-gap: 0.6rem;
     @include body-style-white($body-reg);
+}
+
+.call-to-action-1 p{
+    font-family: $sans-serif-body-font;
+    font-weight: 300;
+    font-size: 17px;
 }
 
 .hero-section a{
@@ -87,6 +113,10 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.call-to-action-2-anchor{
+    display: none;
 }
 
 .call-to-action-2{

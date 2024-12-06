@@ -6,9 +6,9 @@
 .site-header {
   display: flex ;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0.5rem 0.75rem 2.5rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -20,24 +20,38 @@
   align-items: center;
 }
 
+// .main-nav, .contact{
+//   @media (min-width $desktop){
+//     padding-top: 1rem;
+//   }
+// }
+
 .logo-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   padding: 0.5rem;
-  width: 32px;
-  height: 48px;
+  width: 48px;
+  height: 64px;
+}
+
+nav a, .contact a{
+  font-family: $sans-serif-body-font;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 .menu-wrapper {
   display: flex;
   justify-content: right;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: fit-content;
+  height: auto;
 }
 
 button {
+  width: 36px;
+  height: 36px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +70,7 @@ button {
 
 .menu-wrapper{
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 20px;
 }
 
