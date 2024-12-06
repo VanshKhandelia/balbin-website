@@ -6,6 +6,14 @@
     padding: $footer-padding;
     justify-content: space-around;
 
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 10px 0;
+    }
+
     .footer-columns {
       width: $footer-column-width;
       display: flex;
@@ -101,11 +109,5 @@
   .footer-columns {
     margin-bottom: 40px;
   }
-  p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 10px 0;
-  }
+  
 }
