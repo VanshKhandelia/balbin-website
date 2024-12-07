@@ -43,3 +43,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Change images every 3 seconds
     setInterval(nextImage, 3000); // 3000 milliseconds = 3 seconds
 });
+
+const button = document.getElementById('main-nav-button')
+const links = document.getElementById('main-nav-list')
+const buttonSVG = document.getElementById('button-svg')
+const header = document.querySelector('.site-header')
+const contact = document.querySelector('.contact')
+
+
+button.addEventListener('click', function(){
+    if (links.classList.contains('close')){
+        links.classList.remove('close')
+        links.classList.add('open')
+
+        contact.classList.contains('close')
+        contact.classList.remove('close')
+        contact.classList.add('open')
+
+        header.classList.remove('site-header')
+        header.classList.add('site-header-mobile')
+        buttonSVG.src = 'images/close.svg'
+
+    } else if (links.classList.contains('open')){
+        links.classList.remove('open')
+        links.classList.add('close')
+
+        contact.classList.contains('open')
+        contact.classList.remove('open')
+        contact.classList.add('close')
+
+        header.classList.remove('site-header-mobile')
+        header.classList.add('site-header')
+        buttonSVG.src = 'images/menu.svg'
+        buttonSVG.style.width = '26px'
+        buttonSVG.style.height = '26px'
+    }
+
+})
