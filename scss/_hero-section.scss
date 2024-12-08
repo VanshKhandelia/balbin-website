@@ -49,8 +49,18 @@
     margin: auto;
 }
 
+@media (min-width: 48.75rem){
+    .break-1{
+        display: block;
+    }
+}
+
 @media (min-width: $desktop){
-    .break{
+    .break-1{
+        display: inline;
+    }
+    
+    .break-2{
         display: block;
     }
 }
@@ -90,7 +100,7 @@ h1{
     width: 100%;
     height: auto;
     position: absolute;
-    bottom: 5.5rem;
+    bottom: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -108,12 +118,17 @@ h1{
     flex-direction: row;
     justify-content: start;
     column-gap: 0.6rem;
+
+    @media (min-width: $desktop){
+        margin-top: 0.5rem;
+    }
 }
 
 .call-to-action-1 p{
     font-family: $sans-serif-body-font;
     font-weight: 300;
     font-size: 16.5px;
+
 }
 
 

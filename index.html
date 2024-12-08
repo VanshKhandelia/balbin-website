@@ -8,19 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-    <script src="javascript/script.js" defer></script>
     <link rel="stylesheet" href="styles/normalize-fwd-vers2.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="javascript/script.js" defer></script>
 </head>
 
 <body>
     <div class="video-background">
         <video autoplay loop muted id="background-video">
-            <source src="images/hero-video.mp4" type="video/mp4">
+            <source src="images/hero-video-desktop.mp4" type="video/mp4" media="(min-width: 50.625rem)">
+            <source src="images/hero-video-mobile.mp4" type="video/mp4">
             Your browser does not support the video element.
         </video>
         <!-- Beginning of Header: (Dani) -->
-        <header class="site-header">
+        <header class="site-header close">
             <div class="site-header-left">
                 <a href="index.html">
                     <div class="logo-wrapper">
@@ -29,20 +30,16 @@
                 </a>
             </div>
             <nav class="main-nav">
-                <ul id="main-nav-list" class="close">
-                    <div class="main-nav-middle">
-                        <!-- <li><a href="#">Water <img src="images/chevron-down-1.svg" alt="arrow down to access drop down menu" class="chevron">
-                        </a></li> -->
-                        <li><a href="#">Still Water</a></li>
-                        <li><a href="#">Sparkling Water</a></li>
-                        <li><a href="#">Story</a></li>
-                        <li><a href="#">Partners</a></li>
-                    </div>
+                <ul id="main-nav-list" class="main-nav-middle close">
+                    <li><a href="#">Still Water</a></li>
+                    <li><a href="#">Sparkling Water</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Partners</a></li>
                 </ul>
-                <div class="contact close">
-                    <a href="#">Contact</a>
-                </div>
             </nav>
+            <div class="contact close">
+                <a href="#">Contact</a>
+            </div>
             <div class="menu-wrapper">
                 <button id="main-nav-button" title="menu button"><img src="images/menu.svg" alt="Menu icon" id="button-svg"></button>
             </div>
@@ -54,7 +51,7 @@
         <section class="hero-section">
             <div class="hero-section-middle">
                 <div class="hero-text-wrapper">
-                    <h1>Celebrating Life's Finest Moments <span class="break"> with a <span class="italic-text">Timeless Beverage</span></span></h1>
+                    <h1>Celebrating Life's Finest Moments <span class="break-2"> with a <span class="italic-text">Timeless <span class="break-1"></span>Beverage</span></span></h1>
                 </div>
             </div>
             <div class="hero-section-bottom">
