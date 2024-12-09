@@ -3,19 +3,100 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+
+.italic-text{
+  @include italic-text($body-reg);
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
 }
 
+.column {
+    box-sizing: border-box;
+    margin: 0;
+    background: $footer-bg-color url('images/pattern.png') repeat;
+    padding: 5rem 0rem;
+  .centered-columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem; 
+    text-align: center;
+  }
+
+  .column {
+    display: none;
+  }
+  .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+  }
+
+  .profile-picture {
+    width: 4rem; 
+    height: 5rem;
+    object-fit: cover;
+  }
+
+  h2 {
+    margin: 5rem auto;
+    padding: 0;
+    @include heading-style-black($heading-md);
+    line-height: 1;
+    text-align:center;
+  }
+  .client-email{
+    margin: 0 auto;
+    text-align:center;
+    margin-top:4rem;
+    max-width:30rem;
+  }
+
+
+@media (min-width: $desktop){
+  padding: 6rem 0rem;
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    @include heading-style-black($heading-lg);
+    max-width: 50rem;
+    margin-bottom: 4rem;
+  }
+  .centered-columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding: 20px;
+}
+
+  .profile-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: left;
+    padding: 20px;
+    margin-top: 30px;
+}
+}
+  
+}
 .hi-there {
     box-sizing: border-box;
-    margin: 0 $padding-sides; /* Apply horizontal margin */
+    margin: 0;
     min-height: 52rem;
     height: 100vh;
     display: flex;
     justify-content: center;
-    background: #F0EFE8 url('images/pattern.png') repeat;
+    background: $footer-bg-color url('images/pattern.png') repeat;
     align-items: center;
     text-align: center;
   
@@ -28,16 +109,15 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 2.5rem; /* Optional internal padding for content */
     }
   
     .section-content {
       h2 {
-        margin: 0;
+        margin: 1rem auto;
         padding: 0;
         @include heading-style-white($heading-lg);
-        line-height: 1.2;
-        letter-spacing: -3px;
+        line-height: 1;
+        text-align:center;
       }
   
       a {
@@ -48,4 +128,22 @@ body {
         font-weight: bold;
       }
     }
+    @media (min-width: $desktop){
+      padding: 10rem 2.5rem;
+      img{
+          mix-blend-mode: multiply;
+          width: 70vw;
+          margin: 9rem auto;
+      }
+      
+  }
+  
+  @media (min-width: $desktop-lg){
+      padding: 10rem 2.5rem;
+      overflow-y: hidden;
+      h2{
+          width: 60rem;
+          max-width:20rem;
+      }
+  }
   }
