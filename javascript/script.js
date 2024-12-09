@@ -43,3 +43,83 @@ document.addEventListener('DOMContentLoaded', () => {
     // Change images every 3 seconds
     setInterval(nextImage, 3000); // 3000 milliseconds = 3 seconds
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('main-nav-button');
+    const links = document.getElementById('main-nav-list');
+    const buttonSVG = document.getElementById('button-svg');
+    const header = document.querySelector('.site-header');
+    const contact = document.querySelector('.contact');
+
+    function updateMenu() {
+        const clientWidth = header.clientWidth;
+        if (clientWidth >= 810) {
+            links.innerHTML = `
+                <li>
+                    <a href="#">
+                        Water
+                        <img src="images/chevron-down-1.svg" alt="arrow down to access drop down menu" class="chevron">
+                    </a>
+                    <ul>
+                        <li><a href="#">Still Water</a></li>
+                        <li><a href="#">Sparkling Water</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Story</a></li>
+                <li><a href="#">Partners</a></li>`;
+            // Ensure the menu is set to its default state for desktop
+            if (links.classList.contains('open')) {
+                links.classList.remove('open');
+                links.classList.add('close');
+            }
+        } else {
+            links.innerHTML = `
+                <li><a href="#">Still Water</a></li>
+                <li><a href="#">Sparkling Water</a></li>
+                <li><a href="#">Story</a></li>
+                <li><a href="#">Partners</a></li>`;
+            // Ensure the menu is set to its default state for mobile
+            if (links.classList.contains('open')) {
+                links.classList.remove('open');
+                links.classList.add('close');
+            }
+        }
+    }
+
+    function toggleMenu() {
+        if (links.classList.contains('close')) {
+            links.classList.remove('close');
+            links.classList.add('open');
+            contact.classList.remove('close');
+            contact.classList.add('open');
+            header.classList.remove('close');
+            header.classList.add('open');
+            buttonSVG.src = 'images/close.svg';
+            buttonSVG.style.width = '26px';
+            buttonSVG.style.height = '26px';
+
+        } else if (links.classList.contains('open')) {
+            links.classList.remove('open');
+            links.classList.add('close');
+            contact.classList.remove('open');
+            contact.classList.add('close');
+            header.classList.remove('open');
+            header.classList.add('close');
+            buttonSVG.src = 'images/menu.svg';
+            buttonSVG.style.width = '34px';
+            buttonSVG.style.height = '34px';
+        }
+    }
+
+    // Menu button click
+    button.addEventListener('click', toggleMenu);
+
+    // Window resize
+    window.addEventListener('resize', updateMenu);
+
+    // Initialize the menu based on the current window size
+    updateMenu();
+});

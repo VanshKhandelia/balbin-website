@@ -20,47 +20,69 @@
     z-index: -1; 
 }
 
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: $primary-white;
-    z-index: 0;
-}
+// .overlay{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     color: $primary-white;
+//     z-index: 0;
+// }
 
 .hero-section{
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    align-items: stretch;
-    flex: 1;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 
-.hero-text {
+.hero-section-middle{
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    left: 0; 
+    right: 0;
+    margin: auto;
+}
+
+@media (min-width: 48.75rem){
+    .break-1{
+        display: block;
+    }
+}
+
+@media (min-width: $desktop){
+    .break-1{
+        display: inline;
+    }
+    
+    .break-2{
+        display: block;
+    }
+}
+
+.hero-text-wrapper {
     @include heading-style-white(1.125rem);
     width: fit-content;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: $padding-sides;
-
+    
     @media (min-width: $desktop){
-        font-size: 28px;
+        @include heading-style-white(1.5rem);
     }
 }
-
 h1{
     width: fit-content;
     height: auto;
 }
+
 
 .inline-block {
     display: block;
@@ -70,18 +92,45 @@ h1{
     @include italic-text(20px);
 }
 
+.hero-section a{
+    text-decoration: none;
+}
+
+.hero-section-bottom{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (min-width: $desktop){
+        bottom: 0.45rem;
+        right: 0.45rem;
+    }
+}
+
 .call-to-action-1{
-    padding: $padding-sides $padding-sides 70px;
+    @include body-style-white($body-reg);
+    padding: 1rem 1.75rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
     column-gap: 0.6rem;
-    @include body-style-white($body-reg);
+
+    @media (min-width: $desktop){
+        margin-top: 0.5rem;
+    }
 }
 
-.hero-section a{
-    text-decoration: none;
+.call-to-action-1 p{
+    font-family: $sans-serif-body-font;
+    font-weight: 300;
+    font-size: 16.5px;
+
 }
+
 
 .arrow{
     display: flex;
@@ -89,29 +138,53 @@ h1{
     align-items: center;
 }
 
+.call-to-action-2-anchor{
+    display: none;
+
+    @media (min-width: $desktop){
+        display: flex;
+        width: 17.5rem;
+        height: 7.5rem; 
+    }
+}
+
 .call-to-action-2{
-    z-index: 1;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
     display: flex;
+    flex-direction: row;
     justify-content: start;
-    width: 17.5rem;
-    height: 7.5rem;    
+
 }
 
 .bottle-img-container{
     width: fit-content;
-    height: fit-content;
+    height: auto;
     
     img{
-        width: 7.5rem;
-        height: 6rem;
-        object-fit: contain;
+        width: 6rem;
+        height: 7.5rem;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
     }
 }
 
-.call-to-action-text{
 
+.call-to-action-2-text{
+    width: 11.5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: $padding-sides;
+    background-color: $primary-white;
+    color: $primary-black;
 }
 
+.call-to-action-2-text p{
+    width: 100%;
+    height: auto;
+    font-family: $sans-serif-body-font;
+    font-weight: 400;
+    font-size: 16px;
+}
