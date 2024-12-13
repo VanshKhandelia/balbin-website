@@ -179,6 +179,10 @@ h1{
     padding: $padding-sides;
     background-color: $primary-white;
     color: $primary-black;
+
+    .arrow{
+        margin-bottom: 0.35rem;
+    }
 }
 
 .call-to-action-2-text p{

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+// Nav menu interactions
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('main-nav-button');
     const links = document.getElementById('main-nav-list');
@@ -58,14 +58,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const clientWidth = header.clientWidth;
         if (clientWidth >= 810) {
             links.innerHTML = `
-                <li>
+                <li id='water-hover'>
                     <a href="#">
                         Water
                         <img src="images/chevron-down-1.svg" alt="arrow down to access drop down menu" class="chevron">
                     </a>
-                    <ul>
-                        <li><a href="#">Still Water</a></li>
-                        <li><a href="#">Sparkling Water</a></li>
+                    <ul class='water-dropdown' id='water-dropdown'>
+                        <li class='water-li' id='water-li'>
+                            <a href="#">
+                                <div class="call-to-action-2">
+                                    <div class="bottle-img-container">
+                                        <img src="./images/hero-img.jpg" alt="A glass bottle of Balbin water against a rock-like background" class="bottle-img">
+                                    </div>
+                                    <div class="call-to-action-2-text hover">
+                                        <p>Still</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class='water-li'>
+                            <a href="#">
+                                <div class="call-to-action-2">
+                                    <div class="bottle-img-container">
+                                        <img src="./images/sparkling-water.jpg" alt="A glass bottle of Balbin water against a rock-like background" class="bottle-img">
+                                    </div>
+                                    <div class="call-to-action-2-text hover">
+                                        <p>Sparkling</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
                     </ul>
                 </li>
                 <li><a href="#">Story</a></li>
@@ -75,6 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 links.classList.remove('open');
                 links.classList.add('close');
             }
+
+            attachHoverListeners();
+
         } else {
             links.innerHTML = `
                 <li><a href="#">Still Water</a></li>
@@ -123,3 +149,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the menu based on the current window size
     updateMenu();
 });
+
+
+// Call to Action 2 Hover Effect
+const cta2 = document.querySelector('.call-to-action-2-anchor')
+const bottleImg = document.querySelector('.bottle-img')
+
+cta2.addEventListener('mouseover', function (){
+    bottleImg.src = "./images/hero-img-hover.png"
+})
+
+cta2.addEventListener('mouseout', function (){
+    bottleImg.src = "./images/hero-img.jpg"
+})
+
+// Water drop down hover
+
+function attachHoverListeners (){
+    const waterHover = document.querySelector('#water-hover')
+    const waterDropdown = document.querySelector('#water-dropdown')
+    const waterLi = document.querySelector('#water-li')
+    
+    waterHover.addEventListener('mouseover', function (){
+        waterDropdown.style.display = 'flex'
+    })
+    
+    waterHover.addEventListener('mouseout', function (){
+        waterDropdown.style.display = 'none'
+    })
+}
+
