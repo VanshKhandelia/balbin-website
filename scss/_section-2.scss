@@ -81,6 +81,8 @@ body {
             a {
                 @include body-style-white($body-reg);
             }
+
+            @include hover-effect();
         }
 
 
