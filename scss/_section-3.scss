@@ -37,6 +37,16 @@
             a {
                 @include body-style-white($body-reg);
             }
+
+            @include hover-effect();
+
+        }
+
+        .heading {
+            img {
+                height: auto;
+                width: auto;
+            }
         }
 
         img {
