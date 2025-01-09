@@ -174,7 +174,7 @@ function attachHoverListeners (){
         waterDropdown.style.display = 'flex'
     })
     
-    waterHover.addEventListener('mouseout', function (){
+    waterDropdown.addEventListener('mouseout', function (){
         waterDropdown.style.display = 'none'
     })
 }
