@@ -108,8 +108,11 @@ footer {
 
 
   .hover-container{
-    font: $primary-black;
     @include hover-effect();
+
+    a{
+      color: $primary-black;
+    }
   }
  
 }
