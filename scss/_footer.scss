@@ -1,8 +1,19 @@
 @use "variables" as *;
 @use "mixins" as *;
+
 footer {
-  @media screen and (min-width: 50em) {
-    background-color: $footer-bg-color;
+ 
+  background-color: $footer-bg-color;
+
+  .container {
+    padding: 20px;
+  }
+  
+  @media screen and (min-width: 1024px) {
+   
+    background-color: #dcd9d2; 
+
+
     padding: $footer-padding;
     justify-content: space-around;
 
@@ -35,15 +46,10 @@ footer {
       margin-bottom: 5px;
     }
 
-    p {
-      display: flex;
-      font-size: 0.8em;
-    }
-
     .balbin-footer {
       display: flex;
       justify-content: space-between;
-      align-content: center;
+      align-items: center;
       width: 100%;
     }
 
@@ -68,40 +74,22 @@ footer {
     }
   }
 
+  // Default styles for elements that are outside the media query
   .balbin-logo {
     width: 50px;
     height: 50px;
     margin-top: 20px;
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
   h3 {
     font-size: 1rem;
     margin-bottom: 3rem;
-  }
-  .balbin-copyright {
-    flex: 1;
-    text-align: left;
-  }
-
-  .purple-copy {
-    color: purple;
-  }
-
-  .balbin-reserved {
-    flex: 1;
-    text-align: right;
   }
 
   .balbin-footer {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 9rem;
   }
@@ -109,4 +97,14 @@ footer {
   .footer-columns {
     margin-bottom: 40px;
   }
+
+  p{
+    padding-left: 30px
+  }
+
+  .balbin-reserved {
+    padding-right: 30px;
+  }
+
+ 
 }

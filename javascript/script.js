@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.carousel-image'); // Get all images with the carousel-image class
     const nameSwitch = document.querySelector('.Name-switch'); // Get the paragraph element
+    const leftArrow = document.querySelector('.arrow-left'); // Get the left arrow
+    const rightArrow = document.querySelector('.arrow-right'); // Get the right arrow
     let currentIndex = 0;  // Set the initial image index
 
     // Function to show the image at the current index
@@ -39,6 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
     }
+
+    function prevImage() {
+        // Decrement the index, and loop back to the last image when it reaches the beginning
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+    leftArrow.addEventListener('click', prevImage);
+    rightArrow.addEventListener('click', nextImage);
 
     // Change images every 3 seconds
     setInterval(nextImage, 3000); // 3000 milliseconds = 3 seconds
