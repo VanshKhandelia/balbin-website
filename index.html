@@ -14,40 +14,40 @@
 </head>
 
 <body>
-    <div class="video-background">
-        <video autoplay loop muted id="background-video">
-            <source src="images/hero-video-desktop.mp4" type="video/mp4" media="(min-width: 50.625rem)">
-            <source src="images/hero-video-mobile.mp4" type="video/mp4">
-            Your browser does not support the video element.
-        </video>
-        <!-- Beginning of Header: (Dani) -->
-        <header class="site-header close">
-            <div class="site-header-left">
-                <a href="index.html">
-                    <div class="logo-wrapper">
-                        <img src="images/balbinlogowhite.svg" alt="Balbin logo in white">
-                    </div>
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul id="main-nav-list" class="main-nav-middle close">
-                    <li><a href="#">Still Water</a></li>
-                    <li><a href="#">Sparkling Water</a></li>
-                    <li><a href="#">Story</a></li>
-                    <li><a href="#">Partners</a></li>
-                </ul>
-            </nav>
-            <div class="contact close">
-                <a href="#">Contact</a>
-            </div>
-            <div class="menu-wrapper">
-                <button id="main-nav-button" title="menu button"><img src="images/menu.svg" alt="Menu icon" id="button-svg"></button>
-            </div>
-        </header>
+    <div class="header">
+        <div class="video-background">
+            <video autoplay loop muted id="background-video">
+                <source src="images/hero-video-desktop.mp4" type="video/mp4" media="(min-width: 50.625rem)">
+                <source src="images/hero-video-mobile.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <!-- Beginning of Header: (Dani) -->
+            <header class="site-header close">
+                <div class="site-header-left">
+                    <a href="index.html">
+                        <div class="logo-wrapper">
+                            <img src="images/balbinlogowhite.svg" alt="Balbin logo in white">
+                        </div>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul id="main-nav-list" class="main-nav-middle close">
+                        <li><a href="#">Still Water</a></li>
+                        <li><a href="#">Sparkling Water</a></li>
+                        <li><a href="#">Story</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </nav>
+                <div class="contact close">
+                    <a href="#">Contact</a>
+                </div>
+                <div class="menu-wrapper">
+                    <button id="main-nav-button" title="menu button"><img src="images/menu.svg" alt="Menu icon" id="button-svg"></button>
+                </div>
+            </header>
+    </div>
         <!-- End of Header: (Dani) -->
         <!-- Beginning of Hero Section: (Dani) -->
-        <div class="overlay">
-        </div>
         <section class="hero-section">
             <div class="hero-section-middle">
                 <div class="hero-text-wrapper">
@@ -57,8 +57,12 @@
             <div class="hero-section-bottom">
                 <a href="#" class="call-to-action-1-anchor">
                     <div class="call-to-action-1">
-                        <p>Explore more</p>
-                        <div class="arrow slot-machine"><img src="images/arrow-down.svg" alt="downwards arrow" class="slot-image"></div>
+                        <a href="#section-moravia">Explore more
+                            <span class="hover-effect">
+                                <img src="images/arrow-down.svg" alt="downwards arrow">
+                                <img src="images/arrow-down.svg" alt="downwards arrow">
+                            </span>
+                        </a>
                     </div>
                 </a>
                 <a href="#" class="call-to-action-2-anchor">
@@ -79,13 +83,16 @@
 
     <main>
         <!-- Beginning of Section 1: "Born from a desire..." (J) -->
-        <section class="section moravia">
+        <section class="section moravia" id="section-moravia">
             <h2>Born from a desire to elevate the ordinary, inspired by the rich heritage of <span class="italic-text">South Moravia.</span></h2>
             <img src="images/section-1-horses.png" alt="A blue monotone picture of human riding horses">
             <div class="section-content">
                 <div class="text">
                     <p>Renowned for its winemaking legacy and vibrant natural beauty, South-Moravia holds a deep connection to the land—a place where centuries-old traditions are celebrated, and the gifts of nature are revered. Guided by this ethos, we sought to elevate land's hidden treasure, mineral-rich water, to the same status as its cherished wines.</p>
-                    <a href="#">Still Water</a>
+                    <a href="#">Story  <span class="hover-effect">
+                        <img src="images/arrow-up-right-black.svg" alt="up black arrow arrow">
+                        <img src="images/arrow-up-right-black.svg" alt="up black arrow arrow">
+                    </span>
                 </div>
             </div>
         </section>
@@ -210,7 +217,10 @@
             <div class="background">
                 <div class="section-content">
                     <h2>Let's create <span class="italic-text">Memorable Experiences</span> together</h2>
-                    <a href="#">Become a Partner</a>
+                    <a href="#">Become a Partner  <span class="arrow hover-effect">
+                        <img src="images/arrow-up-right-white.svg" alt="up white arrow">
+                        <img src="images/arrow-up-right-white.svg" alt="up white arrow">
+                    </span>
                 </div>
             </div>
         </section>
