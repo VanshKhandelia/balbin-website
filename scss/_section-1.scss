@@ -40,6 +40,10 @@
         a{
             @include body-style-black($body-reg);
         }
+        img{
+            margin: 0 auto;
+        }
+        @include hover-effect();
     }
     }
     @media (min-width: $desktop){
