@@ -106,5 +106,13 @@ footer {
     padding-right: 30px;
   }
 
+
+  .hover-container{
+    @include hover-effect();
+
+    a{
+      color: $primary-black;
+    }
+  }
  
 }
