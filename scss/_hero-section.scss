@@ -112,31 +112,28 @@ h1{
 }
 
 .call-to-action-1{
-    @include body-style-white($body-reg);
+    width: 100%;
+    height: auto;
     padding: 1rem 1.75rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
-    column-gap: 0.6rem;
+
 
     @media (min-width: $desktop){
         margin-top: 0.5rem;
     }
+
+    @include hover-effect()
 }
 
-.call-to-action-1 p{
+.call-to-action-1 a{
     font-family: $sans-serif-body-font;
+    color: $primary-white;
     font-weight: 300;
-    font-size: 16.5px;
-
+    font-size: $body-reg;
 }
 
-
-.arrow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .call-to-action-2-anchor{
     display: none;
@@ -179,10 +176,6 @@ h1{
     padding: $padding-sides;
     background-color: $primary-white;
     color: $primary-black;
-
-    .arrow{
-        margin-bottom: 0.35rem;
-    }
 }
 
 .call-to-action-2-text p{
