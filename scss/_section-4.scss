@@ -89,8 +89,9 @@
     font-size: 1.2rem;
   }
   .gourmet {
+    text-align: center;
     font-size: 2.1rem;
-    line-height: 1.5;
+    line-height: 1.1;
     display: inline-block;
     overflow: hidden;
 
@@ -147,11 +148,7 @@
     line-height: 1.4; // Tighter line-height for smaller screens
 
     .gourmet-menu{
-      padding: 0;
-    }
-
-    .word {
-      font-size: 1rem; // Ensure words scale dynamically on mobile as well
+      padding: 6rem 2rem;
     }
 
     .Balin-Locations {
