@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+// HEADING TEXT
+// Heading style white
+@mixin heading-style-white($size) {
+    font-family: $heading-font;
+    color: $primary-white;
+    font-size: $size;
+}
+
+// Heading style black
+@mixin heading-style-black($size) {
+    font-family: $heading-font;
+    color: $primary-black;
+    font-size: $size;
+}
+
+// BODY TEXT
+// Body style white
+@mixin body-style-white($size) {
+    font-family: $body-font;
+    color: $primary-white;
+    font-size: $size;
+}
+
+// Body style black
+@mixin body-style-black($size) {
+    font-family: $body-font;
+    color: $primary-black;
+    font-size: $size;
+}
+
+// Italic
+@mixin italic-text($size) {
+    font-family: $header-font-italic;
+    font-style: italic;
+    letter-spacing: $header-font-italic-tracking;
+}
+
+
+//for the hover effect
+@mixin hover-effect() {
+    a {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .hover-effect {
+        display: inline-block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+    }
+
+    .hover-effect img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .hover-effect img:nth-child(1) {
+        top: 0;
+    }
+
+    .hover-effect img:nth-child(2) {
+        top: 100%;
+    }
+
+    /* Hover effect */
+    a:hover .hover-effect img:nth-child(1) {
+        transform: translateY(-100%);
+    }
+
+    a:hover .hover-effect img:nth-child(2) {
+        transform: translateY(-100%);
+    }
+}

@@ -1,0 +1,73 @@
+/*SECTION 1 Liquid Gold*/
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.italic-text{
+    @include italic-text($body-reg);
+}
+
+.moravia {
+    box-sizing: border-box;
+    background-position: center center;
+    background: #F0EFE8 url('images/unknown-1.png') repeat;
+    min-height: 52rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    h2 {
+      margin: 0 auto;
+      padding: 0;
+      @include heading-style-black($heading-lg);
+      line-height: 1;
+      text-align:center;
+    }
+
+    img{
+        mix-blend-mode: multiply;
+        width:100vw;
+        margin: 9rem auto;
+    }
+    .section-content {
+      max-width: 30rem;
+      .text{
+        @include body-style-black($body-reg);
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        justify-content: flex-start;
+
+        a{
+            @include body-style-black($body-reg);
+        }
+        img{
+            margin: 0 auto;
+        }
+        @include hover-effect();
+    }
+    }
+    @media (min-width: $desktop){
+        padding: 10rem 2.5rem;
+        img{
+            mix-blend-mode: multiply;
+            width: 70vw;
+            margin: 9rem auto;
+        }
+        h2{
+            font-size: $heading-xl;
+            width: 60rem;
+            text-align:center;
+        }
+        
+    }
+    
+    @media (min-width: $desktop-lg){
+        padding: 10rem 2.5rem;
+        overflow-y: hidden;
+        h2{
+            font-size: $heading-xxl;
+            width: 60rem;
+            text-align:center;
+        }
+    }
+  }

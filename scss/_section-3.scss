@@ -1,0 +1,113 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.mineral-water {
+    background-image: url('../images/section-3-bg.png');
+
+    padding: 0 $padding-sides;
+
+    .right-content {
+        padding: 10rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7.5rem;
+        justify-content: center;
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            height: min-content;
+            justify-content: flex-start;
+
+            h2 {
+                @include heading-style-white($heading-md);
+                text-align: center;
+                margin: 0;
+
+                span {
+                    font-family: $header-font-italic;
+                    font-style: italic;
+                    letter-spacing: $header-font-italic-tracking;
+                }
+            }
+
+            a {
+                @include body-style-white($body-reg);
+            }
+
+            @include hover-effect();
+
+        }
+
+        .heading {
+            img {
+                height: auto;
+                width: auto;
+            }
+        }
+
+        img {
+            height: 15rem;
+            width: 12.5rem;
+        }
+
+        .text {
+            @include body-style-white($body-reg);
+
+            p {
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .images-vertical-scroll {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        img {
+            height: 24.7869rem;
+            width: auto;
+            object-fit: cover;
+            object-position: center;
+            padding-bottom: 1.25rem;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        display: flex;
+        position: relative;
+
+        >div {
+            flex: 1;
+        }
+
+        .right-content {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 1.25rem 1.25rem 1.25rem 0;
+            justify-content: space-between;
+            max-height: 100vh;
+            gap: 1.25rem;
+            position: sticky;
+            top: 0;
+
+            .heading h2 {
+                @include heading-style-white($heading-lg);
+            }
+        }
+
+        .images-vertical-scroll {
+            padding: 1.25rem 0 0 1.25rem;
+
+            img {
+                height: 100vh;
+                width: 100%;
+            }
+        }
+    }
+}

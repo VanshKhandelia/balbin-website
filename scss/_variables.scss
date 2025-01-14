@@ -1,0 +1,50 @@
+// Colours
+$primary-white: #ffffff;
+$primary-black: #000000;
+$primary-blue: #061136;
+
+// Font-families (The fonts below have been chosen as free alternatives. The original fonts on the Balbin website are custom designed and paid fonts for the Balbin website.)
+$heading-font: "Goudy Old Style", serif;
+$heading-font-tracking: -0.043em;
+// $header-font-italic:
+$header-font-italic: "Hoefler Text", serif;
+$header-font-italic-tracking: -0.062em;
+
+// $body-font-italic: ;
+$body-font: "Goudy Old Style", serif;
+//sans-serif-body-font for links
+$sans-serif-body-font:"Roboto", sans-serif;
+
+
+// Heading style
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    letter-spacing: $heading-font-tracking;
+    font-weight: normal;
+}
+  
+
+
+// Font-sizes
+$heading-xxl: 5rem;
+$heading-xl: 4rem;
+$heading-lg: 2.5rem;
+$heading-md: 2rem;
+
+
+$body-reg: 1rem;
+$body-small: 0.75rem;
+
+
+// Section
+$padding-sides: 1.25rem;
+
+// Media queries
+$desktop: 50.625rem;
+$desktop-lg: 75rem;
+
+
+$footer-column-width: 30%;
+$footer-bg-color: #dcd9d2;
+$footer-text-color: #333;
+$footer-padding: 1.25rem;

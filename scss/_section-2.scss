@@ -1,0 +1,116 @@
+/*SECTION 2 Liquid Gold*/
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.liquid-gold {
+    box-sizing: border-box;
+    background-image: url("../images/section-2-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    min-height: 52rem;
+    height: 100vh;
+
+    padding: 2.5rem $padding-sides;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        @include heading-style-white($heading-lg);
+
+        span {
+            font-family: $header-font-italic;
+            font-style: italic;
+            letter-spacing: $header-font-italic-tracking;
+        }
+    }
+
+    div.section-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 80px;
+        width: calc(100%);
+
+        figure {
+            display: flex;
+            gap: 2.5rem;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: min-content;
+            overflow-x: hidden;
+
+            img {
+                width: 8.75rem;
+                height: 4.9944rem;
+            }
+
+            figcaption {
+                width: max-content;
+
+                p {
+                    @include body-style-white($body-small);
+                    margin: 0;
+                    width: max-content;
+                }
+            }
+        }
+
+        .text {
+            @include body-style-white($body-reg);
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            justify-content: flex-start;
+
+            a {
+                @include body-style-white($body-reg);
+            }
+
+            @include hover-effect();
+        }
+
+
+
+    }
+
+    @media (min-width: $desktop) {
+        padding: 80px 1.25rem;
+        min-height: 100vh;
+
+        h2 {
+            font-size: $heading-xl;
+        }
+
+        .text {
+            width: 45rem;
+        }
+    }
+
+    @media (min-width: $desktop-lg) {
+        padding: 5rem 2.5rem;
+        overflow-y: hidden;
+
+        h2 {
+            font-size: $heading-xxl;
+            margin: 0;
+            width: 51.5rem;
+        }
+    }
+
+}
